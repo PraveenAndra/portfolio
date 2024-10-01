@@ -1,12 +1,14 @@
-// app/page.tsx
-'use client';
+import Intro from "@/components/Intro";
+import SectionDivider from "@/components/SectionDivider";
+import About from "@/components/About";
 
 
-
-
-const ChatPage = () => {
-
-
-};
-
-export default ChatPage;
+export default function Home() {
+    return(
+      <main className="flex flex-col items-center px-4">
+          <Intro />
+          <SectionDivider />
+          <About />
+      </main>
+    );
+}

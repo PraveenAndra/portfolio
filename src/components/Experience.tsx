@@ -20,7 +20,8 @@ export default function Experience() {
                  className="scroll-mt-28 mb-28 sm:mb-40">
             <SectionHeading>My experience</SectionHeading>
             <VerticalTimeline
-                lineColor={theme === "light" ? "#9ca3af" : "rgba(255, 255, 255, 0.5)"}>
+                lineColor=""
+                className="relative z-{-100}">
                 {experiencesData.map((item, index) => (
                     <React.Fragment key={index}>
                         <VerticalTimelineElement
@@ -43,8 +44,9 @@ export default function Experience() {
                             icon={item.icon}
                             iconStyle={{
                                 background:
-                                    theme === "light" ? "white" : "rgba(255, 255, 255, 0.15)",
+                                    theme === "light" ? "white" : "darkgray",
                                 fontSize: "1.5rem",
+                                zIndex: 10, // Make sure the icon has a higher z-index
                             }}
                         >
                             <h3 className="font-semibold capitalize">{item.title}</h3>

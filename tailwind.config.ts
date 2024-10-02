@@ -1,11 +1,12 @@
 const config: {
-  plugins: never[];
+  plugins: any[];
   theme: {
     extend: {
       backgroundImage: { "gradient-conic": string; "gradient-radial": string };
       colors: { background: string; foreground: string }
     }
   };
+  darkMode: string;
   content: string[]
 } = {
   content: [
@@ -27,5 +28,6 @@ const config: {
     },
   },
   plugins: [],
+  darkMode: "class",
 };
 export default config;

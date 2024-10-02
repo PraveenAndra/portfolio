@@ -1,13 +1,16 @@
 "use client";
 
 import React from "react";
+import SectionHeading from "./SectionHeading";
 import { motion } from "framer-motion";
-import SectionHeading from "@/components/SectionHeading";
+import { useSectionInView } from "@/lib/hooks";
 
 export default function About() {
+    const { ref } = useSectionInView("About");
 
     return (
         <motion.section
+            ref={ref as React.Ref<HTMLElement>}
             className="mb-28 max-w-[45rem] text-center leading-8 sm:mb-40 scroll-mt-28"
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
@@ -16,18 +19,30 @@ export default function About() {
         >
             <SectionHeading>About me</SectionHeading>
             <p className="mb-3">
-                After earning my Bachelor&#39;s degree in Electronics & Communication Engineering, I transitioned into software development to pursue my passion for technology. I gained hands-on experience working on full-stack applications using 
-                <span className="font-medium">React, Node.js, Spring Boot, and PostgreSQL</span>
-                , along with cloud technologies like 
-                <span className="font-medium"> AWS</span> and
-                <span className="font-medium"> Google Cloud</span>
-                . I enjoy architecting scalable systems and optimizing deployment pipelines to improve efficiency.
-                Currently, I am pursuing a Master&#39;s in Computer Science at Indiana University, where I am deepening my knowledge of cloud-native development, CI/CD pipelines, and DevOps.
-                I am seeking new challenges in software engineering roles to leverage my skills and passion for problem-solving.
+                After graduating with a degree in{" "}
+                <span className="font-medium">Accounting</span>, I decided to pursue my
+                passion for programming. I enrolled in a coding bootcamp and learned{" "}
+                <span className="font-medium">full-stack web development</span>.{" "}
+                <span className="italic">My favorite part of programming</span> is the
+                problem-solving aspect. I <span className="underline">love</span> the
+                feeling of finally figuring out a solution to a problem. My core stack
+                is{" "}
+                <span className="font-medium">
+          React, Next.js, Node.js, and MongoDB
+        </span>
+                . I am also familiar with TypeScript and Prisma. I am always looking to
+                learn new technologies. I am currently looking for a{" "}
+                <span className="font-medium">full-time position</span> as a software
+                developer.
             </p>
 
             <p>
-                <span className="italic">When I&#39;m not coding</span>, I love unwinding by playing video games, watching movies, and exploring the latest in technology. I&#39;m also passionate about learning new skills, whether it&#39;s related to software development or picking up something fun and creative.
+                <span className="italic">When I&#39;m not coding</span>, I enjoy playing
+                video games, watching movies, and playing with my dog. I also enjoy{" "}
+                <span className="font-medium">learning new things</span>. I am currently
+                learning about{" "}
+                <span className="font-medium">history and philosophy</span>. I&#39;m also
+                learning how to play the guitar.
             </p>
         </motion.section>
     );

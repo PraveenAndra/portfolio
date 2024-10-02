@@ -49,14 +49,6 @@ export const experiencesData = [
         icon: React.createElement(FaJava),
         date: "September 2021 – July 2023",
     },
-    {
-        title: "Cloud-Native Java Application Deployment",
-        location: "AWS Cloud",
-        description:
-            "Implemented a CI/CD pipeline using Terraform and AWS, boosting rollout speed by 30% and ensuring 99.9% uptime with AWS Secrets Manager and CloudWatch.",
-        icon: React.createElement(FaAws),
-        date: "2023",
-    },
 ] as const;
 
 export const projectsData = [

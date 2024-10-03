@@ -6,10 +6,11 @@ import Project from "./Project"
 import SectionHeading from "@/components/SectionHeading";
 import { useSectionInView } from "@/lib/hooks";
 
+type ProjectProps = (typeof projectsData)[number];
 export default function Projects() {
     const { ref } = useSectionInView("Projects", 0.5);
 
-    const handleClick = (project) => {
+    const handleClick = (project:ProjectProps) => {
         console.log("Hello");
         window.open(project.githubUrl, "_blank"); // Open the GitHub URL in a new tab
     };

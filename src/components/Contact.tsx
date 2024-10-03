@@ -45,7 +45,7 @@ export default function Contact() {
                     event.preventDefault(); // Prevent page reload
                     const formData = new FormData(event.target as HTMLFormElement);
 
-                    const {data,error} = await sendEmail(formData);
+                    const {error} = await sendEmail(formData);
 
                     if (error) {
                         toast.error(error);

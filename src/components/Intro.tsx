@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import ProfileImage from "../../public/Praveen_Image.jpeg"
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -31,13 +32,13 @@ export default function Intro() {
                         }}
                     >
                         <Image
-                            src=""
+                            src={ProfileImage}
                             alt="Praveen's portrait"
-                            width="192"
-                            height="192"
+                            width="200"
+                            height="200"
                             quality="95"
                             priority={true}
-                            className="h-24 w-24 rounded-full object-cover border-[0.35rem] border-white shadow-xl"
+                            className="h-32 w-32 rounded-full object-cover  shadow-xl"
                         />
                     </motion.div>
 

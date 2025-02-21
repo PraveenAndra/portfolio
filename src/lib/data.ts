@@ -6,6 +6,8 @@ import rentItAll from "../../public/RentItAll.png";
 import quickTicket from "../../public/QuickTicket1.png";
 import cloud from "../../public/Cloud.jpeg";
 import portfolioImage from "../../public/Portfolio1.jpg";
+import chatterBox from "../../public/ChatterBox.png";
+import movie from "../../public/Movie.jpg";
 import {CgWorkAlt} from "react-icons/cg";
 import {
     SiAngular,
@@ -60,9 +62,17 @@ export const experiencesData = [
         title: "Software Engineer",
         location: "Ford Motor Private Limited, Chennai, India",
         description:
-            "Engineered high-performance microservices for an e-commerce platform, improved deployment efficiency by 25%, and led migration to Google Cloud Platform. Integrated Tekton into CI/CD pipelines, enhancing deployment reliability by 40%.",
+            "Worked on backend microservices for an e-commerce platform, implementing business logic, optimizing SQL queries, and integrating REST APIs. Improved CI/CD pipelines, enhanced deployment automation, and contributed to cloud migration using Docker, Kubernetes, and Terraform.",
         icon: React.createElement(CgWorkAlt),
         date: "September 2021 – July 2023",
+    },
+    {
+        title: "Software Development Intern",
+        location: "Smart Bridge, Visakhapatnam, India",
+        description:
+            "Developed scalable web applications using React, TypeScript, and TailwindCSS. Built interactive UI components, collaborated with UX designers and backend teams, and contributed to Agile development workflows.",
+        icon: React.createElement(CgWorkAlt),
+        date: "March 2021 – August 2021",
     },
 ] as const;
 
@@ -98,6 +108,23 @@ export const projectsData = [
             "Implemented a CI/CD pipeline using AWS, Terraform & Ansible to automate deployment and monitoring of a cloud-native Java application.",
         tags: ["AWS", "Terraform", "Ansible", "Java"],
         githubUrl: "https://github.com/PraveenAndra/cloud-java-deployment-automation"
+    },
+    {
+        title: "ChatterBox - Real-Time Chat App",
+        imageUrl: chatterBox,
+        description:
+        "Built a chat app with React Native and Firebase, enabling real-time messaging, secure authentication, and online status tracking.",
+        tags: ["React Native", "Firebase", "Firestore", "Authentication"],
+        githubUrl: "https://github.com/PraveenAndra/ChatterBox",
+    },
+
+    {
+        title: "Hybrid Movie Recommendation System",
+        imageUrl: movie,
+        description:
+        "Developed a movie recommender using KNN for genre analysis and Apriori for user pattern mining, combining content-based and collaborative filtering.",
+        tags: ["Python", "Machine Learning", "KNN", "Apriori Algorithm","Data Mining"],
+        githubUrl: "https://github.com/PraveenAndra/movie-recommendation-system",
     },
 ] as const;
 
